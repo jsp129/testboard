@@ -38,7 +38,7 @@ if ($pass != $passwd) {
             echo "<meta http-equiv='Refresh' content='0; url=cmodify.php?board=$board&id=$id&wdate=$wdate&wname=$wname&wmemo=$wmemo'>";
             break;
         case 1: // 삭제 프로그램 호출
-            echo "<meta http-equiv='Refresh' content='0; url=cdelete.php?board=$board&id=$id&wdate=$wdate'>";
+            echo "<meta http-equiv='Refresh' content='0; url=delete.php?board=$board&id=$id&wdate=$wdate'>";
             break;
     }
 }
