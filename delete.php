@@ -11,8 +11,8 @@ if (mysqli_connect_errno()) {
     exit;
 }
 
-$id = $_GET['id'] ?? '';
-$board = $_GET['board'] ?? '';
+$id = $_GET['id'];
+$board = $_GET['board'];
 
 $result = mysqli_query($con, "SELECT * FROM $board WHERE id=$id");
 $filename = '';
@@ -37,7 +37,7 @@ echo("
 // 삭제된 글보다 글 번호가 큰 게시물은 글 번호를 1씩 감소
 $tmp = mysqli_query($con, "SELECT id FROM $board ORDER BY id DESC");
 $last_row = mysqli_fetch_assoc($tmp);
-$last = $last_row['id'] ?? 0; // 가장 마지막 글 번호 추출
+$last = $last_row['id']; // 가장 마지막 글 번호 추출
 
 $i = $id + 1; // 삭제된 글의 번호보다 1이 큰 글 번호부터 변경
 while ($i <= $last) {
